@@ -10,7 +10,9 @@ const Home = () => {
   const [orderSuccess, setOrderSuccess] = useState(null);
   const [showCheckout, setShowCheckout] = useState(false);
 
-  const stripePromise = loadStripe('pk_test_51QncD0SJgIkeS33VmBjXhIoRuD34Or1TU53TYQ4grtuM82pgJzVk6jnAl7EbG4DLHm7HrH9Dfd2ADr8UzOJkH9Ur00EdLs3ik7');
+
+
+ const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
   const products = [
     {
